@@ -10,14 +10,14 @@ from aiohttp import web
 # def index(request):
 #     return web.Response(body=b'<h1>Awesome</h1>')
 
-# def index(request):
-#     # 原版返回的是一个二进制，所以就下载了
-#     return web.Response(body='<h1>Awesome</h1>')
+def index(request):
+    # 原版返回的是一个二进制，所以就下载了
+    return web.Response(body='<h1>Awesome</h1>')
 #测试结果没有把Awesome用h1显示，而是把 <h1>Awesome</h1> 全部显示在网页上了
 
-def index(request):
-    return web.Response(body=b'<h1>Awesome</h1>', headers={'content-type':'text/html'})
-#存在一个中文乱码的问题，暂时未解决  ????????????
+# def index(request):
+#     return web.Response(body=b'<h1>Awesome</h1>', headers={'content-type':'text/html'})
+# #存在一个中文乱码的问题，暂时未解决  ????????????
 
 @asyncio.coroutine
 def init(loop):
