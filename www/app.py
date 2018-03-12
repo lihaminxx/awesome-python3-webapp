@@ -32,3 +32,7 @@ loop.run_until_complete(init(loop))
 loop.run_forever()
 
 #test git 
+
+#test add to the temporay place  and then rollback 
+
+#add to the 
